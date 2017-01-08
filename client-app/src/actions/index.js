@@ -4,7 +4,7 @@ import {browserHistory} from 'react-router';
 import {AUTH_USER,AUTH_ERROR,LOGOUT_USER,FETCH_POST,ADD_POST,POST_SHOW,DELETE_POST,EDIT_POST,
     UPDATE_POST,FETCH_POST_SUCCESS,EDIT_POST_SUCCESS,POST_SHOW_SUCCESS,UPDATE_POST_SUCCESS,
 USER_INFO_SUCCESS,USER_INFO} from './types';
-const ROOT_URL = 'http://localhost:8000';
+const ROOT_URL = 'http://bookclub.dev';
 export function loginUser({email,password}){
   return function(dispatch){
       axios.post(`${ROOT_URL}/api/login`,{email,password})
@@ -17,7 +17,7 @@ export function loginUser({email,password}){
         })
 
         .catch(()=>{
-          dispatch(authError("Empty Required Field"));
+          dispatch(authError("Invalid, Required Field"));
         });
   }
 
@@ -56,7 +56,7 @@ export function addPost({title,body}){
   return function(dispatch){
     axios.post(`${ROOT_URL}/api/posts`,{title,body},
       {
-      headers:{authorization:localStorage.getItem('token')}
+      headers:{authorization:`Bearer`+localStorage.getItem('token')}
     })
     .then(response => {
       dispatch({

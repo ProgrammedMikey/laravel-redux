@@ -37,6 +37,11 @@ ul.header li a {
 .hero-spacer {
   margin-top: 50px;
   text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome-height {
+  min-height: 100px;
 }
 
 .hero-feature {

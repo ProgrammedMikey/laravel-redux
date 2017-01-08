@@ -25,8 +25,10 @@ class PostsShow extends Component{
         return (
             <div>
             <h3>{post.title}</h3>
-            {this.handleDeletePost()}    
+
             <p>{post.body}</p>
+                <br/>
+                {this.handleDeletePost()}
             </div>
                );
         }

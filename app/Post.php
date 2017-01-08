@@ -8,7 +8,9 @@ class Post extends Model
 {
     protected $table = "posts";
 
-    protected  $fillable = ['id','title','body'];
+    protected  $fillable = ['id','title','body', 'user_id'];
+
+    public function user() { return $this->belongsTo('App\User'); }
 
     public function scopeDeneme($query)
     {

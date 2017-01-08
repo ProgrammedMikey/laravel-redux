@@ -4,7 +4,7 @@ import Posts from './posts/posts';
 export default () => <div>
         <header className="jumbotron hero-spacer">
                 <h1>Book Trading Club</h1>
-                <p>First rule of Book Trading Club is don't talk about Book trading Club!</p>
+                <p>First rule of Book Trading Club is don't talk about Book Trading Club!</p>
         </header>
 
 
@@ -15,7 +15,7 @@ export default () => <div>
         </div>
         <hr/>
 
-        <div className="row text-center">
+        <div className="row text-center welcome-height">
 
                 <div className="col-md-3 col-sm-6 hero-feature">
                         <div className="thumbnail">
@@ -51,5 +51,13 @@ export default () => <div>
                 </div>
 
         </div>
+        <br/>
+        <div className="row">
+                <div className="col-lg-12">
+                        <h3><center>List of All Books</center></h3>
+                </div>
+        </div>
+        <hr/>
+
         <Posts />
 </div>

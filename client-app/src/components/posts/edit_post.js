@@ -37,8 +37,8 @@ this.context.router.push('/posts');
                   {title.touched && title.error && <div className="text-danger">{title.error}</div>}
                   </fieldset>
                 <fieldset className="form-group">
-                  <label>Body:</label>
-                  <textarea {...body} className="form-control" ></textarea>
+                  <label>Book URL:</label>
+                  <input {...body} className="form-control" />
                   {body.touched && body.error && <div className="text-danger">{body.error}</div>}
                 </fieldset>
                  <button className="btn btn-success">Add</button>

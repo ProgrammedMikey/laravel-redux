@@ -21,12 +21,12 @@ this.context.router.push('/posts');
                 <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
                 <fieldset className="form-group">
                   <label>Title:</label>
-                  <input {...title} className="form-control" />
+                  <input {...title} className="form-control" placeholder="Enter title of book"/>
                   {title.touched && title.error && <div className="text-danger">{title.error}</div>}
                   </fieldset>
                 <fieldset className="form-group">
-                  <label>Body:</label>
-                  <textarea {...body} className="form-control" ></textarea>
+                  <label>Book Image:</label>
+                  <input {...body} type="url" className="form-control" placeholder="Enter image URL of book cover"/>
                   {body.touched && body.error && <div className="text-danger">{body.error}</div>}
                 </fieldset>
                  <button className="btn btn-success">Add</button>
@@ -45,7 +45,7 @@ if(! formProps.title){
  errors.title = "Title is required";   
 }
 if(! formProps.body){
-    errors.body = "Body is required";
+    errors.body = "Book Url is required";
 }
 return errors;
 }
